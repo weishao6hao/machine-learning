@@ -25,8 +25,8 @@ def kmeans(data,k):
     return label
 
 def main():
-    data1=np.random.normal(size=(20,3))
-    data2=np.random.normal(size=(20,3))+3
+    data1=np.random.normal(size=(20,2))
+    data2=np.random.normal(size=(20,2))+3
     data=np.append(data1,data2,axis=0)
     label=kmeans(data,2)
     plt.scatter(data[:,0],data[:,1],c=label)

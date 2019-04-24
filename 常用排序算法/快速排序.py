@@ -5,7 +5,7 @@ def quick_sort(lists, left, right):
     low = left
     high = right
     while left < right:
-        while left < right and lists[right] >= key:
+        while left < right and lists[right] > key:
             right -= 1
         lists[left] = lists[right]
         while left < right and lists[left] <= key:
@@ -15,4 +15,4 @@ def quick_sort(lists, left, right):
     quick_sort(lists, low, left - 1)
     quick_sort(lists, left + 1, high)
     return lists
-quick_sort([2,5,7,9,2,4,,6,8,32])
+quick_sort([2,5,7,9,2,4,6,8,32],0,8)
